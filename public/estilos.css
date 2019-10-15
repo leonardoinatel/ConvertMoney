@@ -2,3 +2,19 @@ h1 img{
     width: 489px;
     border: 1px solid red;
 }
+
+body{
+    text-align: center
+}
+
+input{
+    display: block;
+    padding: 4px;
+    margin-block: 10px;
+    border: 1px solid black;
+    background: #fdfdfd;
+}
+
+input button{
+    background-color: cadetblue
+}
