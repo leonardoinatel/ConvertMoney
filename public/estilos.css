@@ -17,13 +17,23 @@ input{
     font-size: 20px;
     border: 1px solid black;
     background: #ffffff;
-    text-align: center;
-    position: relative;
 }
 
-input[type="button"] {
+button{
     background: #d8d8d8;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+    margin-block: 2px;
 }
+
+.result{
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    background: #fdfdfd;
+
+}
+
 /* All kinds of button
     button, input[type="button"], input[type="submit"] { 
     color:#050; 
