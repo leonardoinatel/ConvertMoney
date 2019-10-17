@@ -6,15 +6,30 @@ h1 img{
 body{
     text-align: center
 }
+label{
+    align-content: center;
+}
 
 input{
-    display: block;
-    padding: 4px;
-    margin-block: 10px;
+    display: inline-block;
+    padding: 10px;
+    margin-block: 2px;
+    font-size: 20px;
     border: 1px solid black;
-    background: #fdfdfd;
+    background: #ffffff;
+    text-align: center;
+    position: relative;
 }
 
-input button{
-    background-color: cadetblue
+input[type="button"] {
+    background: #d8d8d8;
 }
+/* All kinds of button
+    button, input[type="button"], input[type="submit"] { 
+    color:#050; 
+    font: bold 84% 'trebuchet ms',helvetica,sans-serif; 
+    background-color:#fed; 
+    border:1px solid; 
+    border-color: #696 #363 #363 #696; 
+} 
+*/
