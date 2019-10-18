@@ -14,7 +14,7 @@ app.get('/', (req,res) => {
     res.render('home')
 })
 
-app.get('/cotacao', (req, res) =>{ //incio da unidade
+app.get('/cotacao', (req, res) => { //incio da unidade
     const { cotacao, quantidade } = (req.query);
     
     if(cotacao && quantidade){
@@ -27,9 +27,9 @@ app.get('/cotacao', (req, res) =>{ //incio da unidade
         })
     }else{
         res.render('cotacao', {
-            error: 'valores invalidos'
+            error: 'valores invalidos, você será redirecinado a pagina inicial em 4 segundos',
         })
-    }  
+    }
 }) //fim da unidade
 //unidade nao pode ser quebrada, isso define a unidade
 
