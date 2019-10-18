@@ -1,9 +1,20 @@
 <%- include('header') %>
 
 <form method="GET" action="/cotacao">
-    <input name="cotacao" placeholder="Cotação dolar"><br>
-    <input name="quantidade" placeholder="Quantidade de dolares"><br>
+    <input name="cotacao" placeholder="Cotação dolar" onkeyup="somenteNumeros(this);"><br>
+    <input name="quantidade" placeholder="Quantidade de dolares" onkeyup="somenteNumeros(this);"><br>
     <button>Converter!</button>
 </form>
 
 <%- include('footer') %>
+
+<script>
+        function somenteNumeros(num) {
+            var er = /[^0-9.]/;
+            er.lastIndex = 0;
+            var campo = num;
+            if (er.test(campo.value)) {
+                campo.value = "";
+            }
+        }
+</script>
