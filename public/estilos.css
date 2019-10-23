@@ -1,50 +1,30 @@
 h1 img{
     width: 489px;
-    border: 4px solid black;
-    background: #fdfdfd
+    border: 4px solid black; 
+    background: #fdfdfd;
 }
 
-.box {
-    border: 5px solid black;
-    background: burlywood;
-    width: 519px;
-    padding: 15px;
-    align-self: center;
-}
-
-div.result{
-    padding: 10px;
-    margin: 0;
-    border: 2px solid black;
-}
-
-/*
-.box{
-    background: green;
+.box, .pure-u-1-3{
+    border: 5px solid green;
+    display: inline-block;
     padding: 20px;
-    border: 4px solid red;
-    margin: 40px;
+    margin-inline: 50px;
+    margin-top: 50px;
 }
-
-.box span{
-    background: white;
-    border: solid red;
-}
-*/
-
 
 head{
     text-align: center
 }
 
 body{
-    text-align: center
+
 }
 
 label{
     align-content: center;
 }
 
+/*inline e block*/
 input{
     display: inline-block;
     padding: 10px;
@@ -68,6 +48,34 @@ button{
     background: #fdfdfd;
 
 }
+/*responsividade*/
+@media (min-width: 768px){
+    .result{
+        background: red;
+    }
+}
+
+/* 
+div.result{
+    padding: 10px;
+    margin: 0;
+    border: 2px solid black;
+    background: #fdfdfd;
+} */ */
+
+/*
+.box{
+    background: green;
+    padding: 20px;
+    border: 4px solid red;
+    margin: 40px;
+}
+
+.box span{
+    background: white;
+    border: solid red;
+}
+*/
 
 /* All kinds of button
     button, input[type="button"], input[type="submit"] { 
@@ -76,5 +84,4 @@ button{
     background-color:#fed; 
     border:1px solid; 
     border-color: #696 #363 #363 #696; 
-} 
-*/
+} */
