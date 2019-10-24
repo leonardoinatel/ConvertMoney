@@ -1,3 +1,6 @@
+//homemaeAPI
+const api = require('./lib/api.bcb')
+
 const express = require('express')
 const app = express()
 const path = require('path')
@@ -22,14 +25,14 @@ app.get('/', async(req,res) => {
     })
 })
 
-app.post('/cotacao', async (req, res) => { //incio da unidade
+app.get('/cotacao', async (req, res) => { //incio da unidade
     const { cotacao, quantidade } = (req.query);
-    console.log(cotacao, quantidade)
-    
+    console.log("index.js",req.query)
+
     if(cotacao && quantidade){
         db = await dbcon
-        console.log("testando",cotacao)
-        await db.run(`INSERT into cotacao_dolar(cotacao) values('${cotacao}')`)
+        const data = api.getToday()
+        await db.run(`INSERT into cotacao_dolar(cotacao,data) values('${cotacao}','${data}')`)
 
         const conversao = convert.convert(cotacao, quantidade)
         res.render('cotacao', {
