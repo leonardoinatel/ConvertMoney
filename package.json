@@ -12,6 +12,7 @@
     "express": "^4.17.1",
     "jest": "^24.9.0",
     "jquery": "^3.4.1",
+    "plotly": "^1.0.6",
     "sqlite": "^3.0.3"
   },
   "devDependencies": {},
