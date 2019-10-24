@@ -43,15 +43,17 @@ button{
 }
 
 .result{
-    padding: 10px;
-    border: 1px solid #d8d8d8;
-    background: #fdfdfd;
+    border: 5px solid green;
+    display: inline-block;
+    padding: 20px;
+    margin-inline: 50px;
+    margin-top: 50px;
 
 }
 /*responsividade*/
 @media (min-width: 768px){
     .result{
-        background: red;
+        background: none;
     }
 }
 
