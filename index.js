@@ -2,6 +2,10 @@ const express = require('express')
 const app = express()
 const path = require('path')
 
+//db
+const sqlite = require('sqlite')
+const dbcon = sqlite.open(path.resolve(__dirname, 'moeda.sqlite'), { Promise })
+
 const convert = require('./lib/convert')
 const apiBCB = require('./lib/api.bcb')
 
@@ -18,10 +22,15 @@ app.get('/', async(req,res) => {
     })
 })
 
-app.get('/cotacao', (req, res) => { //incio da unidade
+app.post('/cotacao', async (req, res) => { //incio da unidade
     const { cotacao, quantidade } = (req.query);
+    console.log(cotacao, quantidade)
     
     if(cotacao && quantidade){
+        db = await dbcon
+        console.log("testando",cotacao)
+        await db.run(`INSERT into cotacao_dolar(cotacao) values('${cotacao}')`)
+
         const conversao = convert.convert(cotacao, quantidade)
         res.render('cotacao', {
             error: false,
@@ -30,6 +39,7 @@ app.get('/cotacao', (req, res) => { //incio da unidade
             conversao: convert.toMoney(conversao)
         })
     }else{
+        console.log("testando",req.body)
         res.render('cotacao', {
             error: 'valores invalidos, você será redirecinado a pagina inicial em 4 segundos',
         })
